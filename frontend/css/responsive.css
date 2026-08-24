@@ -1,0 +1,45 @@
+/* ============ Responsive breakpoints ============ */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  section { padding: 72px 0; }
+}
+
+/* Mobile nav + one-column layouts */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 65px; left: 0; right: 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 24px;
+    gap: 18px;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition), transform var(--transition);
+  }
+  .nav-menu.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .nav-toggle { display: flex; }
+
+  .about-meta { display: flex; width: 100%; }
+  .skills-grid, .projects-grid, .featured-grid { grid-template-columns: 1fr; }
+  .timeline { padding-left: 22px; }
+  section { padding: 56px 0; }
+  .hero { padding-top: 88px; }
+}
+
+/* Small mobile */
+@media (max-width: 425px) {
+  .container { padding: 0 16px; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .hero-actions .btn { width: 100%; }
+  .modal { padding: 22px; }
+  .back-to-top { right: 16px; bottom: 16px; width: 42px; height: 42px; }
+}
+
+/* Prevent any horizontal overflow globally */
+html, body { max-width: 100%; overflow-x: hidden; }
