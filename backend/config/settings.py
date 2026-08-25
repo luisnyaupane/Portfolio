@@ -121,6 +121,11 @@ REST_FRAMEWORK = {
 # in production.
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',
-    default='http://127.0.0.1:5500,http://localhost:5500,http://127.0.0.1:5501,http://localhost:5501',
+    default=(
+        'http://127.0.0.1:5500,'
+        'http://localhost:5500,'
+        'http://127.0.0.1:5501,'
+        'http://localhost:5501'
+    ),
     cast=Csv(),
 )
