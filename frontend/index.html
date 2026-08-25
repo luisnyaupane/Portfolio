@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luis Nyaupane — Full Stack Developer</title>
-  <meta name="description" content="Portfolio of Luis Nyaupane, a Full Stack Developer specializing in Django, Django REST Framework, and JavaScript." />
+  <meta name="description"
+    content="Portfolio of Luis Nyaupane, a Full Stack Developer specializing in Django, Django REST Framework, and JavaScript." />
   <meta name="keywords" content="Full Stack Developer, Django, Django REST Framework, Python, JavaScript, Portfolio" />
   <meta name="author" content="Luis Nyaupane" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
+
 <body>
 
   <header class="navbar">
@@ -41,7 +41,11 @@
     <section id="home" class="hero">
       <div class="container">
         <div id="hero-content" class="hero-content">
-          <p class="loading-state">Loading...</p>
+          <div id="hero-content" class="hero-content">
+            <div class="loading-state">
+              <div class="loader"></div>
+            </div>
+          </div>
         </div>
         <div class="social-links"></div>
       </div>
@@ -52,7 +56,11 @@
         <h2 class="section-title">About Me</h2>
         <p class="section-subtitle">A quick introduction</p>
         <div id="about-content" class="about-grid">
-          <p class="loading-state">Loading about section...</p>
+          <div id="about-content" class="about-grid">
+            <div class="loading-state">
+              <div class="loader"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -62,7 +70,11 @@
         <h2 class="section-title">Skills</h2>
         <p class="section-subtitle">Technologies I work with</p>
         <div id="skills-content" class="skills-grid">
-          <p class="loading-state">Loading skills...</p>
+          <div id="skills-content" class="skills-grid">
+            <div class="loading-state">
+              <div class="loader"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -78,28 +90,40 @@
         <h2 class="section-title">All Projects</h2>
         <p class="section-subtitle">Browse everything I've built</p>
         <div id="projects-grid" class="projects-grid">
-          <p class="loading-state">Loading projects...</p>
+          <div id="experience-content">
+            <div class="loading-state">
+              <div class="loader"></div>
+            </div>
+          </div>
         </div>
         <div id="projects-pagination" class="pagination"></div>
       </div>
     </section>
 
-    <section id="experience" class="bg-alt">
-      <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <p class="section-subtitle">Where I've applied what I've learned</p>
-        <div id="experience-content">
-          <p class="loading-state">Loading experience...</p>
-        </div>
+  <section id="experience" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <p class="section-subtitle">Where I've applied what I've learned</p>
+
+    <div id="experience-content">
+      <div class="loading-state">
+        <div class="loader"></div>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
 
     <section id="education">
       <div class="container">
         <h2 class="section-title">Education</h2>
         <p class="section-subtitle">My academic background</p>
         <div id="education-content" class="education-grid">
-          <p class="loading-state">Loading education...</p>
+          <div id="education-content" class="education-grid">
+            <div class="loading-state">
+              <div class="loader"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -152,7 +176,8 @@
 
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 
-  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="modal-title">
     <div class="modal">
       <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
       <div id="modal-body"></div>
@@ -165,4 +190,5 @@
   <script src="js/contact.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
+
 </html>
