@@ -1,7 +1,7 @@
 /**
  * api.js — centralised API access layer.
  * Every fetch() call in the app goes through here so the base URL and
- * error-handling behaviour only need to change in one place.
+ * error-handling behaviour only need to change in one place hb.
  */
 const API_BASE_URL = (() => {
   // If served from the same host as the backend, this could be relative ('/api').
