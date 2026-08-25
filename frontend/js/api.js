@@ -6,7 +6,7 @@
 const API_BASE_URL = (() => {
   // If served from the same host as the backend, this could be relative ('/api').
   // For local dev, the backend is assumed to run on 127.0.0.1:8000.
-  return 'http://127.0.0.1:8000/api';
+  return 'https://portfolio-qfxg.onrender.com/api';
 })();
 
 class ApiError extends Error {
