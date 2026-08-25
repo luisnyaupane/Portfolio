@@ -4,21 +4,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Luis Nyaupane — Full Stack Developer</title>
-  <meta name="description"
-    content="Portfolio of Luis Nyaupane, a Full Stack Developer specializing in Django, Django REST Framework, and JavaScript." />
-  <meta name="keywords" content="Full Stack Developer, Django, Django REST Framework, Python, JavaScript, Portfolio" />
+
+  <meta
+    name="description"
+    content="Portfolio of Luis Nyaupane, a Full Stack Developer specializing in Django, Django REST Framework, and JavaScript."
+  />
+
+  <meta
+    name="keywords"
+    content="Full Stack Developer, Django, Django REST Framework, Python, JavaScript, Portfolio"
+  />
+
   <meta name="author" content="Luis Nyaupane" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+  />
 </head>
 
 <body>
 
+  <!-- ==================== NAVBAR ==================== -->
   <header class="navbar">
     <div class="nav-inner">
-      <a href="#home" class="nav-brand">Luis Nyaupane</a>
+
+      <a href="#home" class="nav-brand">
+        Luis Nyaupane
+      </a>
+
       <nav class="nav-menu" id="nav-menu" aria-label="Primary">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
@@ -28,167 +49,422 @@
         <a href="#education" class="nav-link">Education</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
+
       <div class="nav-actions">
-        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+
+        <button
+          class="icon-btn"
+          id="theme-toggle"
+          aria-label="Toggle theme"
+          type="button"
+        >
+          <i class="fa-solid fa-moon"></i>
         </button>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
       </div>
+
     </div>
   </header>
 
+
+  <!-- ==================== MAIN ==================== -->
   <main>
+
+    <!-- ==================== HOME ==================== -->
     <section id="home" class="hero">
+
       <div class="container">
+
         <div id="hero-content" class="hero-content">
-          <div id="hero-content" class="hero-content">
-            <div class="loading-state">
-              <div class="loader"></div>
-            </div>
+          <div class="loading-state">
+            <div class="loader"></div>
           </div>
         </div>
+
         <div class="social-links"></div>
+
       </div>
+
     </section>
 
+
+    <!-- ==================== ABOUT ==================== -->
     <section id="about">
+
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">A quick introduction</p>
+
+        <h2 class="section-title">
+          About Me
+        </h2>
+
+        <p class="section-subtitle">
+          A quick introduction
+        </p>
+
         <div id="about-content" class="about-grid">
-          <div id="about-content" class="about-grid">
-            <div class="loading-state">
-              <div class="loader"></div>
-            </div>
+
+          <div class="loading-state">
+            <div class="loader"></div>
           </div>
+
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- ==================== SKILLS ==================== -->
     <section id="skills" class="bg-alt">
+
       <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-subtitle">Technologies I work with</p>
+
+        <h2 class="section-title">
+          Skills
+        </h2>
+
+        <p class="section-subtitle">
+          Technologies I work with
+        </p>
+
         <div id="skills-content" class="skills-grid">
-          <div id="skills-content" class="skills-grid">
-            <div class="loading-state">
-              <div class="loader"></div>
-            </div>
+
+          <div class="loading-state">
+            <div class="loader"></div>
           </div>
+
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- ==================== PROJECTS ==================== -->
     <section id="projects">
+
       <div class="container">
+
+        <!-- Featured Projects -->
         <div class="featured-section">
-          <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">A few projects I'm most proud of</p>
-          <div id="featured-projects" class="featured-grid"></div>
+
+          <h2 class="section-title">
+            Featured Projects
+          </h2>
+
+          <p class="section-subtitle">
+            A few projects I'm most proud of
+          </p>
+
+          <div
+            id="featured-projects"
+            class="featured-grid"
+          ></div>
+
         </div>
 
-        <h2 class="section-title">All Projects</h2>
-        <p class="section-subtitle">Browse everything I've built</p>
-        <div id="projects-grid" class="projects-grid">
-          <div id="experience-content">
-            <div class="loading-state">
-              <div class="loader"></div>
-            </div>
+
+        <!-- All Projects -->
+        <h2 class="section-title">
+          All Projects
+        </h2>
+
+        <p class="section-subtitle">
+          Browse everything I've built
+        </p>
+
+        <div
+          id="projects-grid"
+          class="projects-grid"
+        >
+          <div class="loading-state">
+            <div class="loader"></div>
           </div>
         </div>
-        <div id="projects-pagination" class="pagination"></div>
+
+        <div
+          id="projects-pagination"
+          class="pagination"
+        ></div>
+
       </div>
+
     </section>
 
-  <section id="experience" class="bg-alt">
-  <div class="container">
-    <h2 class="section-title">Experience</h2>
-    <p class="section-subtitle">Where I've applied what I've learned</p>
 
-    <div id="experience-content">
-      <div class="loading-state">
-        <div class="loader"></div>
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section id="experience" class="bg-alt">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Experience
+        </h2>
+
+        <p class="section-subtitle">
+          Where I've applied what I've learned
+        </p>
+
+        <div id="experience-content">
+
+          <div class="loading-state">
+            <div class="loader"></div>
+          </div>
+
+        </div>
+
       </div>
-    </div>
 
-  </div>
-</section>
+    </section>
 
+
+    <!-- ==================== EDUCATION ==================== -->
     <section id="education">
+
       <div class="container">
-        <h2 class="section-title">Education</h2>
-        <p class="section-subtitle">My academic background</p>
-        <div id="education-content" class="education-grid">
-          <div id="education-content" class="education-grid">
-            <div class="loading-state">
-              <div class="loader"></div>
-            </div>
+
+        <h2 class="section-title">
+          Education
+        </h2>
+
+        <p class="section-subtitle">
+          My academic background
+        </p>
+
+        <div
+          id="education-content"
+          class="education-grid"
+        >
+
+          <div class="loading-state">
+            <div class="loader"></div>
           </div>
+
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- ==================== CONTACT ==================== -->
     <section id="contact" class="bg-alt">
+
       <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Have a project or opportunity in mind? Send a message.</p>
+
+        <h2 class="section-title">
+          Get In Touch
+        </h2>
+
+        <p class="section-subtitle">
+          Have a project or opportunity in mind? Send a message.
+        </p>
+
         <div class="contact-grid">
+
+          <!-- Contact Information -->
           <div class="contact-info-card">
-            <h3>Contact Info</h3>
+
+            <h3>
+              Contact Info
+            </h3>
+
             <ul class="contact-info-list">
-              <li>📍 Kathmandu, Nepal</li>
-              <li>✉️ neupaneluis07@gmail.com</li>
-              <li>📞 +977 9864152762</li>
+
+              <li>
+                📍 Kathmandu, Nepal
+              </li>
+
+              <li>
+                ✉️ neupaneluis07@gmail.com
+              </li>
+
+              <li>
+                📞 +977 9864152762
+              </li>
+
             </ul>
+
             <div class="social-links"></div>
+
           </div>
 
-          <form id="contact-form" class="contact-form" novalidate>
+
+          <!-- Contact Form -->
+          <form
+            id="contact-form"
+            class="contact-form"
+            novalidate
+          >
+
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
+
+              <label for="name">
+                Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+
             </div>
+
+
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
+
+              <label for="email">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+
             </div>
+
+
             <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" />
+
+              <label for="subject">
+                Subject
+              </label>
+
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+              />
+
             </div>
+
+
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+
+              <label for="message">
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+
             </div>
-            <p id="contact-status" class="form-status" role="status" aria-live="polite"></p>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+
+
+            <p
+              id="contact-status"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+            >
+              Send Message
+            </button>
+
           </form>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
+
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
+
     <div class="container">
-      <p>&copy; <span id="year"></span> Luis Nyaupane. Built with Django, DRF, and vanilla JavaScript.</p>
+
+      <p>
+        &copy;
+        <span id="year"></span>
+        Luis Nyaupane.
+        Built with Django, DRF, and vanilla JavaScript.
+      </p>
+
     </div>
+
   </footer>
 
-  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 
-  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true"
-    aria-labelledby="modal-title">
+  <!-- ==================== BACK TO TOP ==================== -->
+  <button
+    class="back-to-top"
+    id="back-to-top"
+    aria-label="Back to top"
+    type="button"
+  >
+    ↑
+  </button>
+
+
+  <!-- ==================== PROJECT MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="project-modal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+  >
+
     <div class="modal">
-      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+
+      <button
+        class="modal-close"
+        id="modal-close"
+        aria-label="Close"
+        type="button"
+      >
+        ✕
+      </button>
+
       <div id="modal-body"></div>
+
     </div>
+
   </div>
 
+
+  <!-- ==================== JAVASCRIPT ==================== -->
   <script src="js/api.js"></script>
   <script src="js/main.js"></script>
   <script src="js/projects.js"></script>
   <script src="js/contact.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+
 </body>
 
 </html>

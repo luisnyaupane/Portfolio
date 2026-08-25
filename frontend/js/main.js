@@ -225,115 +225,43 @@ function groupBy(arr, key) {
 }
 
 /* ---------- Experience ---------- */
-/* ---------- Experience ---------- */
 async function loadExperience() {
   const container = document.getElementById('experience-content');
-
-  if (!container) {
-    console.error('experience-content element not found.');
-    return;
-  }
-
-  container.innerHTML = `
-    <p class="loading-state">Loading experience...</p>
-  `;
-
+  container.innerHTML = `<p class="loading-state">Loading experience...</p>`;
   try {
     const items = await Api.getExperience();
-
-    console.log('Experience API response:', items);
-
-    if (!Array.isArray(items) || items.length === 0) {
-      container.innerHTML = `
-        <p class="empty-state">No experience added yet.</p>
-      `;
+    if (!items.length) {
+      container.innerHTML = `<p class="empty-state">No experience added yet.</p>`;
       return;
     }
-
-    container.innerHTML = `
-      <div class="timeline">
-        ${items.map(renderExperienceItem).join('')}
-      </div>
-    `;
-
+    container.innerHTML = `<div class="timeline">${items.map(renderExperienceItem).join('')}</div>`;
     initScrollAnimations();
-
   } catch (err) {
-    console.error('Experience loading error:', err);
-
-    container.innerHTML = `
-      <p class="error-state">
-        Unable to load experience. Please try again later.
-      </p>
-    `;
+    container.innerHTML = `<p class="error-state">Unable to load experience. Please try again later.</p>`;
+    console.error(err);
   }
 }
 
 function renderExperienceItem(exp) {
-  // End date
-  const end = exp.currently_working
-    ? 'Present'
-    : formatDate(exp.end_date);
-
-  // Description → bullet points
+  const end = exp.currently_working ? 'Present' : formatDate(exp.end_date);
   const bullets = (exp.description || '')
-    .split(/\r?\n/)
-    .map(line => line.trim())
+    .split('\n')
+    .map((line) => line.trim())
     .filter(Boolean)
-    .map(line => `
-      <li>${escapeHtml(line)}</li>
-    `)
+    .map((line) => `<li>${escapeHtml(line)}</li>`)
     .join('');
-
-  // Technologies
-  const technologies = Array.isArray(exp.technologies)
-    ? exp.technologies
-    : [];
-
-  const technologyTags = technologies.length
-    ? `
-      <div class="skill-tags">
-        ${technologies.map(technology => `
-          <span class="skill-tag skill-tag--sm">
-            ${escapeHtml(technology)}
-          </span>
-        `).join('')}
-      </div>
-    `
-    : '';
-
   return `
     <div class="timeline-item fade-in-up">
-
       <div class="timeline-dot"></div>
-
       <div class="timeline-content">
-
-        <h3>
-          ${escapeHtml(exp.position)}
-        </h3>
-
-        <p class="timeline-subtitle">
-          ${escapeHtml(exp.company)}
-          ·
-          ${formatDate(exp.start_date)}
-          –
-          ${end}
-        </p>
-
-        ${
-          bullets
-            ? `<ul class="timeline-bullets">${bullets}</ul>`
-            : ''
-        }
-
-        ${technologyTags}
-
+        <h3>${escapeHtml(exp.position)}</h3>
+        <p class="timeline-subtitle">${escapeHtml(exp.company)} · ${formatDate(exp.start_date)} – ${end}</p>
+        <ul class="timeline-bullets">${bullets}</ul>
+        ${exp.technologies.length ? `<div class="skill-tags">${exp.technologies.map((t) => `<span class="skill-tag skill-tag--sm">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
       </div>
-
-    </div>
-  `;
+    </div>`;
 }
+
 /* ---------- Education ---------- */
 async function loadEducation() {
   const container = document.getElementById('education-content');
